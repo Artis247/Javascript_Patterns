@@ -1,8 +1,9 @@
 class Auto {
-    accept(visitor) {
-      visitor(this);
-    }
+  accept(visitor) {
+    visitor(this);
   }
+}
+  
   
   class Tesla extends Auto {
     info() {
@@ -31,5 +32,10 @@ class Auto {
       auto.export = console.log(`Exported data: ${auto.info()}`);
   };
  
+  const tesla = new Tesla()
+  const bmw = new Bmw()
+
+  console.log(tesla.accept(exportVisitor)) //"Exported data: It is a Tesla car!"
+  console.log(bmw.accept(exportVisitor))   // "Exported data: It is a BMW car!"
 
   
