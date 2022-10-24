@@ -40,7 +40,7 @@ class MemberFactory {
 const factory = new MemberFactory()
 
 const members = [
-  factory.create('Vladilen', 'simple'),
+  factory.create('Denis', 'simple'),
   factory.create('Elena', 'premium'),
   factory.create('Vasilisa', 'standard'),
   factory.create('Ivan', 'premium'),

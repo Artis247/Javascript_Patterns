@@ -12,6 +12,6 @@ const carWithOwner = Object.create(car, {
   }
 })
 
-console.log(carWithOwner.__proto__ === car)
+console.log(carWithOwner.__proto__ === car)  // true
 
-carWithOwner.init()
+carWithOwner.init()                          // "У меня есть 4 колеса, мой владелец Дмитрий"

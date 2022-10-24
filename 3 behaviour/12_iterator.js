@@ -4,7 +4,7 @@ class MyIterator {
     this.data = data
   }
 
-  [Symbol.iterator]() {
+  [Symbol.iterator]() {    //ES6
     return {
       next: () => {
         if (this.index < this.data.length) {

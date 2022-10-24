@@ -3,7 +3,9 @@ class Complaints {
     this.complaints = []
   }
 
-  reply(complaint) {}
+  reply(complaint) {
+    console.log(complaint)
+  }
 
   add(complaint) {
     this.complaints.push(complaint)
@@ -40,6 +42,6 @@ class ComplaintRegistry {
 
 const registry = new ComplaintRegistry()
 
-console.log(registry.register('Vladilen', 'service', 'недоступен'))
+console.log(registry.register('Denis', 'service', 'недоступен'))
 console.log(registry.register('Elena', 'product', 'вылазит ошибка'))
 

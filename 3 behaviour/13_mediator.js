@@ -49,3 +49,8 @@ room.register(igor)
 vlad.send('Hello!', lena)
 lena.send('Hello hello!', vlad)
 igor.send('Vsem privet')
+
+// "Denis => Elena: Hello!"
+// "Elena => Denis: Hello hello!"
+// "Igor => Denis: Vsem privet"
+// "Igor => Elena: Vsem privet"

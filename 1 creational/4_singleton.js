@@ -1,9 +1,9 @@
 class Database {
   constructor(data) {
-    if (Database.exists) {
-      return Database.instance
+    if (Database.exists) {  // объект класса  Database 
+      return Database.instance // уже был проинициилизировван
     }
-    Database.instance = this
+    Database.instance = this  // создание инстанса
     Database.exists = true
     this.data = data
   }
@@ -14,9 +14,9 @@ class Database {
 }
 
 const mongo = new Database('MongoDB')
-console.log(mongo.getData())
+console.log(mongo.getData())     //"MongoDB"
 
 const mysql = new Database('MySQL')
-console.log(mysql.getData())
+console.log(mysql.getData())     // "MongoDB"
 
 

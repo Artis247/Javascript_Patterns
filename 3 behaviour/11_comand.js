@@ -26,8 +26,10 @@ class Command {
 
 const x = new Command(new MyMath(2))
 
-console.log(x.execute('square'))
-console.log(x.execute('cube'))
+console.log(x.execute('square'))  //4  вызовы методов
+console.log(x.execute('cube'))    //8
 
-console.log(x.commandsExecuted)
+
+
+console.log(x.commandsExecuted) //[ 'square', 'cube'] - метаинформация
 

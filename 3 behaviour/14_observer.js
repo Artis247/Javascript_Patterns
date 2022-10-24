@@ -54,5 +54,5 @@ stream$.fire({type: 'INCREMENT'})
 stream$.fire({type: 'DECREMENT'})
 stream$.fire({type: 'ADD', payload: 10})
 
-console.log(obs1.state)
-console.log(obs2.state)
+console.log(obs1.state)  //12
+console.log(obs2.state)  //53
