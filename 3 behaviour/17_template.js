@@ -1,10 +1,10 @@
 class Employee {
   constructor(name, salary) {
     this.name = name
-    this.salary = salary
+    this.salary = salary       // скелкт
   }
 
-  responsibilities() {}
+  responsibilities() {}  // делегирует в дочерний класс
 
   work() {
     return `${this.name} выполняет ${this.responsibilities()}`
@@ -16,7 +16,7 @@ class Employee {
 }
 
 class Developer extends Employee {
-  constructor(name, salary) {
+  constructor(name, salary) {        // функционал
     super(name, salary)
   }
 
@@ -35,7 +35,7 @@ class Tester extends Employee {
   }
 }
 
-const dev = new Developer('Владилен', 100000)
+const dev = new Developer('Денис', 100000)
 console.log(dev.getPaid())
 console.log(dev.work())
 
