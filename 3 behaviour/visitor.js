@@ -30,7 +30,6 @@ class Auto {
       if (auto instanceof Audi)
       auto.export = console.log(`Exported data: ${auto.info()}`);
   };
-  Footer
-  © 2022 GitHub, Inc.
-  Footer navigation
+ 
+
   
