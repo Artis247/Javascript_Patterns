@@ -1,80 +1,82 @@
 class Light {
-  constructor(light) {   // Базовый класс
-    this.light = light
+  constructor(light) {
+    // Базовый класс
+    this.light = light;
   }
 }
 //================ СВЕТОФОР =====================
 class RedLight extends Light {
   constructor() {
-    super('red')
+    super("red");
   }
 
   sign() {
-    return 'СТОП'
+    return "СТОП";
   }
 }
 
 class YellowLight extends Light {
   constructor() {
-    super('yellow')
+    super("yellow");
   }
 
   sign() {
-    return 'ГОТОВЬСЯ'
+    return "ГОТОВЬСЯ";
   }
 }
 
 class GreenLight extends Light {
   constructor() {
-    super('green')
+    super("green");
   }
 
   sign() {
-    return 'ЕДЬ!'
+    return "ЕДЬ!";
   }
 }
-//=================Работа светфора =====================
+//=================Работа светофора =====================
 class TrafficLight {
   constructor() {
     this.states = [
-      new RedLight(),
-      new YellowLight(),
-      new GreenLight()
-    ]
-    this.current = this.states[0]
+      new RedLight(), // стоп
+      new YellowLight(), // готовься
+      new GreenLight(), // едь
+    ];
+    this.current = this.states[0];
   }
 
   change() {
-    const total = this.states.length
-    let index = this.states.findIndex(light => light === this.current)
+    // логика изменения состояний светофора
+    const total = this.states.length;
+    let index = this.states.findIndex((light) => light === this.current);
 
     if (index + 1 < total) {
-      this.current = this.states[index + 1]
+      this.current = this.states[index + 1];
     } else {
-      this.current = this.states[0]
+      this.current = this.states[0];
     }
   }
 
   sign() {
-    return this.current.sign()
+    return this.current.sign();
   }
 }
 
-const traffic = new TrafficLight()
-console.log(traffic.sign())
-traffic.change()
+const traffic = new TrafficLight();
+console.log(traffic.sign());
+traffic.change();
 
-console.log(traffic.sign())
-traffic.change()
+console.log(traffic.sign());
+traffic.change();
 
-console.log(traffic.sign())
-traffic.change()
+console.log(traffic.sign());
+traffic.change();
 
-console.log(traffic.sign())
-traffic.change()
+console.log(traffic.sign());
+traffic.change();
 
-console.log(traffic.sign())
-traffic.change()
+console.log(traffic.sign());
+traffic.change();
 
-console.log(traffic.sign())
-traffic.change()
+console.log(traffic.sign());
+traffic.change();
