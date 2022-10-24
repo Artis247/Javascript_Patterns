@@ -33,7 +33,7 @@ class GreenLight extends Light {
     return 'ЕДЬ!'
   }
 }
-
+//=================Работа светфора =====================
 class TrafficLight {
   constructor() {
     this.states = [
