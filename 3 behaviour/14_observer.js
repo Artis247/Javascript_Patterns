@@ -1,4 +1,4 @@
-class Subject {
+class Subject {    //Один ко многим
   constructor() {
     this.observers = []
   }
