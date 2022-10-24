@@ -43,7 +43,7 @@ class Observer {
 
 const stream$ = new Subject()
 
-const obs1 = new Observer()
+const obs1 = new Observer()  // 1 по умолчанию
 const obs2 = new Observer(42)
 
 stream$.subscribe(obs1)
@@ -54,5 +54,5 @@ stream$.fire({type: 'INCREMENT'})
 stream$.fire({type: 'DECREMENT'})
 stream$.fire({type: 'ADD', payload: 10})
 
-console.log(obs1.state)  //12
-console.log(obs2.state)  //53
+console.log(obs1.state)  //12  1
+console.log(obs2.state)  //53  42

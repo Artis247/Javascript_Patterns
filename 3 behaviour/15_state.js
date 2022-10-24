@@ -1,9 +1,9 @@
 class Light {
-  constructor(light) {
+  constructor(light) {   // Базовый класс
     this.light = light
   }
 }
-
+//================ СВЕТОФОР =====================
 class RedLight extends Light {
   constructor() {
     super('red')
