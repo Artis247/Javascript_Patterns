@@ -1,4 +1,4 @@
-class Vehicle {
+class Vehicle {     // подобие интерфейсов
   travelTime() {
     return this.timeTaken
   }
@@ -33,6 +33,6 @@ class Commute {
 
 const commute = new Commute()
 
-console.log(commute.travel(new Taxi()))
-console.log(commute.travel(new Bus()))
-console.log(commute.travel(new Car()))
+console.log(commute.travel(new Taxi()))  // 5
+console.log(commute.travel(new Bus()))   // 10
+console.log(commute.travel(new Car()))   // 3
